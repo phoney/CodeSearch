@@ -3,9 +3,10 @@
     <entity name="AreaCode" representedClassName="AreaCode" syncable="YES">
         <attribute name="areaCode" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="areaCodeString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AreaCode" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="AreaCode" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>
