@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "MDataStore.h"
+
+//#define BUILD_STORE 1
 
 @interface AppDelegate ()
 
@@ -17,6 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+#if BUILD_STORE
+	[self buildDataStore];
+#endif
+	
+	[self listObjects];
+
 	return YES;
 }
 
@@ -55,6 +64,37 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+-(NSURL*)storeURL
+{
+#if !defined(BUILD_STORE)
+	NSURL *storeURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"CodeSearch" ofType:@"sqlite"]];
+#else
+	NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CodeSearch.sqlite"];
+#endif
+	
+	return storeURL;
+}
+
+-(NSDictionary*)persistentStoreOptions
+{
+	NSDictionary* options = nil;
+	// The default journal mode is WAL, which requires an
+	// accessory file created by sqlite. This isn't compatible with
+	// a read-only file stored in the app bundle. Setting the journal mode
+	// to DELETE doesn't require the journal file. If the sqlite file
+	// were copied to a writable location this wouldn't be required.
+	// The journal mode needs to be set both when creating the db and
+	// when opening it later for reading.
+#if !defined(BUILD_STORE)
+	options = @{ NSReadOnlyPersistentStoreOption : @YES,
+				 NSSQLitePragmasOption : @{@"journal_mode" : @"DELETE"} };
+#else 
+	options = @{ NSSQLitePragmasOption : @{@"journal_mode" : @"DELETE"} };
+#endif
+
+	return options;
+}
+
 - (NSManagedObjectModel *)managedObjectModel {
     // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
     if (_managedObjectModel != nil) {
@@ -74,10 +114,11 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CodeSearch.sqlite"];
     NSError *error = nil;
+	NSURL* storeURL = self.storeURL;
+	NSDictionary* options = self.persistentStoreOptions;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
@@ -123,5 +164,28 @@
         }
     }
 }
+
+#pragma mark - Utilities
+
++(AppDelegate*)applicationDelegate {
+	return (AppDelegate*)UIApplication.sharedApplication.delegate;
+}
+
+-(void)buildDataStore
+{
+	NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CodeSearch.sqlite"];
+	NSLog(@"Building Data Store at %@", storeURL);
+	MDataStore* dataStore = [[MDataStore alloc] initWithMOC:self.managedObjectContext];
+	[dataStore buildDataStore];
+	
+	abort();	// This is all we do
+}
+
+-(void)listObjects
+{
+	MDataStore* dataStore = [[MDataStore alloc] initWithMOC:self.managedObjectContext];
+	[dataStore listObjects];
+}
+
 
 @end
