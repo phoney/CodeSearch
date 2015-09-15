@@ -16,13 +16,25 @@
 		38BE4C661BA77CBB00144435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C651BA77CBB00144435 /* Assets.xcassets */; };
 		38BE4C691BA77CBB00144435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C671BA77CBB00144435 /* LaunchScreen.storyboard */; };
 		38BE4C741BA77CBB00144435 /* CodeSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C731BA77CBB00144435 /* CodeSearchTests.m */; };
-		38BE4C801BA783DE00144435 /* MDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C7F1BA783DE00144435 /* MDataStore.m */; settings = {ASSET_TAGS = (); }; };
 		38BE4C851BA7857400144435 /* AreaCode+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C821BA7857400144435 /* AreaCode+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		38BE4C861BA7857400144435 /* AreaCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C841BA7857400144435 /* AreaCode.m */; settings = {ASSET_TAGS = (); }; };
 		38BE4C881BA7910A00144435 /* CodeSearch.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C871BA7910A00144435 /* CodeSearch.sqlite */; settings = {ASSET_TAGS = (); }; };
-		38BE4C8B1BA7A26100144435 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C8A1BA7A26100144435 /* CHCSVParser.m */; settings = {ASSET_TAGS = (); }; };
-		38BE4C8F1BA7A2F400144435 /* npa_report.csv in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C8E1BA7A2F400144435 /* npa_report.csv */; settings = {ASSET_TAGS = (); }; };
 		38EC2C081BA89D2900BA92C1 /* MResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EC2C071BA89D2900BA92C1 /* MResultCell.m */; settings = {ASSET_TAGS = (); }; };
+		38EC2C0B1BA8D6DC00BA92C1 /* AreaCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C841BA7857400144435 /* AreaCode.m */; settings = {ASSET_TAGS = (); }; };
+		38EC2C0C1BA8D6DC00BA92C1 /* CodeSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C621BA77CBB00144435 /* CodeSearch.xcdatamodeld */; };
+		38EC2C0D1BA8D6DC00BA92C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C5A1BA77CBB00144435 /* AppDelegate.m */; };
+		38EC2C0E1BA8D6DC00BA92C1 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C8A1BA7A26100144435 /* CHCSVParser.m */; settings = {ASSET_TAGS = (); }; };
+		38EC2C0F1BA8D6DC00BA92C1 /* MSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389089EB1BA897ED000F525A /* MSearchResultsController.m */; settings = {ASSET_TAGS = (); }; };
+		38EC2C101BA8D6DC00BA92C1 /* MMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389089E81BA894F9000F525A /* MMainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		38EC2C111BA8D6DC00BA92C1 /* MResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EC2C071BA89D2900BA92C1 /* MResultCell.m */; settings = {ASSET_TAGS = (); }; };
+		38EC2C121BA8D6DC00BA92C1 /* MDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C7F1BA783DE00144435 /* MDataStore.m */; settings = {ASSET_TAGS = (); }; };
+		38EC2C131BA8D6DC00BA92C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C571BA77CBB00144435 /* main.m */; };
+		38EC2C141BA8D6DC00BA92C1 /* AreaCode+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C821BA7857400144435 /* AreaCode+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		38EC2C171BA8D6DC00BA92C1 /* npa_report.csv in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C8E1BA7A2F400144435 /* npa_report.csv */; settings = {ASSET_TAGS = (); }; };
+		38EC2C181BA8D6DC00BA92C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C671BA77CBB00144435 /* LaunchScreen.storyboard */; };
+		38EC2C191BA8D6DC00BA92C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C651BA77CBB00144435 /* Assets.xcassets */; };
+		38EC2C1A1BA8D6DC00BA92C1 /* CodeSearch.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C871BA7910A00144435 /* CodeSearch.sqlite */; settings = {ASSET_TAGS = (); }; };
+		38EC2C1B1BA8D6DC00BA92C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C5F1BA77CBB00144435 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +76,8 @@
 		38BE4C8E1BA7A2F400144435 /* npa_report.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = npa_report.csv; path = AreaCodeInfo/npa_report.csv; sourceTree = "<group>"; };
 		38EC2C061BA89D2900BA92C1 /* MResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MResultCell.h; path = Source/MResultCell.h; sourceTree = "<group>"; };
 		38EC2C071BA89D2900BA92C1 /* MResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MResultCell.m; path = Source/MResultCell.m; sourceTree = "<group>"; };
+		38EC2C1F1BA8D6DC00BA92C1 /* BuildDataStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildDataStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38EC2C211BA8DA6B00BA92C1 /* BuildDataStore.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BuildDataStore.pch; path = Source/BuildDataStore.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +89,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		38BE4C6C1BA77CBB00144435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38EC2C151BA8D6DC00BA92C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -140,6 +161,7 @@
 			children = (
 				38BE4C531BA77CBB00144435 /* CodeSearch.app */,
 				38BE4C6F1BA77CBB00144435 /* CodeSearchTests.xctest */,
+				38EC2C1F1BA8D6DC00BA92C1 /* BuildDataStore.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				38BE4C571BA77CBB00144435 /* main.m */,
+				38EC2C211BA8DA6B00BA92C1 /* BuildDataStore.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -228,6 +251,23 @@
 			productReference = 38BE4C6F1BA77CBB00144435 /* CodeSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		38EC2C091BA8D6DC00BA92C1 /* BuildDataStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38EC2C1C1BA8D6DC00BA92C1 /* Build configuration list for PBXNativeTarget "BuildDataStore" */;
+			buildPhases = (
+				38EC2C0A1BA8D6DC00BA92C1 /* Sources */,
+				38EC2C151BA8D6DC00BA92C1 /* Frameworks */,
+				38EC2C161BA8D6DC00BA92C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BuildDataStore;
+			productName = CodeSearch;
+			productReference = 38EC2C1F1BA8D6DC00BA92C1 /* BuildDataStore.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -261,6 +301,7 @@
 			targets = (
 				38BE4C521BA77CBB00144435 /* CodeSearch */,
 				38BE4C6E1BA77CBB00144435 /* CodeSearchTests */,
+				38EC2C091BA8D6DC00BA92C1 /* BuildDataStore */,
 			);
 		};
 /* End PBXProject section */
@@ -270,7 +311,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38BE4C8F1BA7A2F400144435 /* npa_report.csv in Resources */,
 				38BE4C691BA77CBB00144435 /* LaunchScreen.storyboard in Resources */,
 				38BE4C661BA77CBB00144435 /* Assets.xcassets in Resources */,
 				38BE4C881BA7910A00144435 /* CodeSearch.sqlite in Resources */,
@@ -285,6 +325,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38EC2C161BA8D6DC00BA92C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38EC2C171BA8D6DC00BA92C1 /* npa_report.csv in Resources */,
+				38EC2C181BA8D6DC00BA92C1 /* LaunchScreen.storyboard in Resources */,
+				38EC2C191BA8D6DC00BA92C1 /* Assets.xcassets in Resources */,
+				38EC2C1A1BA8D6DC00BA92C1 /* CodeSearch.sqlite in Resources */,
+				38EC2C1B1BA8D6DC00BA92C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -295,11 +347,9 @@
 				38BE4C861BA7857400144435 /* AreaCode.m in Sources */,
 				38BE4C641BA77CBB00144435 /* CodeSearch.xcdatamodeld in Sources */,
 				38BE4C5B1BA77CBB00144435 /* AppDelegate.m in Sources */,
-				38BE4C8B1BA7A26100144435 /* CHCSVParser.m in Sources */,
 				389089EC1BA897ED000F525A /* MSearchResultsController.m in Sources */,
 				389089E91BA894F9000F525A /* MMainTableViewController.m in Sources */,
 				38EC2C081BA89D2900BA92C1 /* MResultCell.m in Sources */,
-				38BE4C801BA783DE00144435 /* MDataStore.m in Sources */,
 				38BE4C581BA77CBB00144435 /* main.m in Sources */,
 				38BE4C851BA7857400144435 /* AreaCode+CoreDataProperties.m in Sources */,
 			);
@@ -310,6 +360,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				38BE4C741BA77CBB00144435 /* CodeSearchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38EC2C0A1BA8D6DC00BA92C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38EC2C0B1BA8D6DC00BA92C1 /* AreaCode.m in Sources */,
+				38EC2C0C1BA8D6DC00BA92C1 /* CodeSearch.xcdatamodeld in Sources */,
+				38EC2C0D1BA8D6DC00BA92C1 /* AppDelegate.m in Sources */,
+				38EC2C0E1BA8D6DC00BA92C1 /* CHCSVParser.m in Sources */,
+				38EC2C0F1BA8D6DC00BA92C1 /* MSearchResultsController.m in Sources */,
+				38EC2C101BA8D6DC00BA92C1 /* MMainTableViewController.m in Sources */,
+				38EC2C111BA8D6DC00BA92C1 /* MResultCell.m in Sources */,
+				38EC2C121BA8D6DC00BA92C1 /* MDataStore.m in Sources */,
+				38EC2C131BA8D6DC00BA92C1 /* main.m in Sources */,
+				38EC2C141BA8D6DC00BA92C1 /* AreaCode+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +536,30 @@
 			};
 			name = Release;
 		};
+		38EC2C1D1BA8D6DC00BA92C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = CodeSearch/Source/BuildDataStore.pch;
+				INFOPLIST_FILE = CodeSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CodeSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		38EC2C1E1BA8D6DC00BA92C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = CodeSearch/Source/BuildDataStore.pch;
+				INFOPLIST_FILE = CodeSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CodeSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -495,6 +586,15 @@
 			buildConfigurations = (
 				38BE4C7C1BA77CBB00144435 /* Debug */,
 				38BE4C7D1BA77CBB00144435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38EC2C1C1BA8D6DC00BA92C1 /* Build configuration list for PBXNativeTarget "BuildDataStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38EC2C1D1BA8D6DC00BA92C1 /* Debug */,
+				38EC2C1E1BA8D6DC00BA92C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

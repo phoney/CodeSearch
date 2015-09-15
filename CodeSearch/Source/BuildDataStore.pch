@@ -1,0 +1,11 @@
+//
+//  BuildDataStore.pch
+//  CodeSearch
+//
+//  Created by Brian Stern on 9/15/15.
+//  Copyright © 2015 PhoneyDeveloper. All rights reserved.
+//
+
+#define BUILD_STORE 1
+
+

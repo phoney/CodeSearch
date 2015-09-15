@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#if BUILD_STORE
 #import "MDataStore.h"
-
-//#define BUILD_STORE 1
+#endif
 
 @interface AppDelegate ()
 
@@ -50,7 +50,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	// Saves changes in the application's managed object context before the application terminates.
-	[self saveContext];
+//	[self saveContext];
 }
 
 #pragma mark - Core Data stack
@@ -134,7 +134,6 @@
     return _persistentStoreCoordinator;
 }
 
-
 - (NSManagedObjectContext *)managedObjectContext {
     // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
     if (_managedObjectContext != nil) {
@@ -171,6 +170,9 @@
 	return (AppDelegate*)UIApplication.sharedApplication.delegate;
 }
 
+#pragma mark - Build a new sqlite database
+
+#if BUILD_STORE
 -(void)buildDataStore
 {
 	NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CodeSearch.sqlite"];
@@ -180,6 +182,7 @@
 	MDataStore* dataStore = [[MDataStore alloc] initWithMOC:self.managedObjectContext];
 	[dataStore buildDataStore];
 	NSLog(@"Finished Building Data Store");
+	NSLog(@"open %@", [storeURL.path stringByDeletingLastPathComponent]);
 	
 	abort();	// This is all we do
 }
@@ -189,6 +192,6 @@
 	MDataStore* dataStore = [[MDataStore alloc] initWithMOC:self.managedObjectContext];
 	[dataStore listObjects];
 }
-
+#endif
 
 @end
