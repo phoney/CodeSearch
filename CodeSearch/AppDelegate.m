@@ -174,9 +174,12 @@
 -(void)buildDataStore
 {
 	NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CodeSearch.sqlite"];
+	[[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];// just in case it already exists
+	
 	NSLog(@"Building Data Store at %@", storeURL);
 	MDataStore* dataStore = [[MDataStore alloc] initWithMOC:self.managedObjectContext];
 	[dataStore buildDataStore];
+	NSLog(@"Finished Building Data Store");
 	
 	abort();	// This is all we do
 }

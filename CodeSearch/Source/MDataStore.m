@@ -27,7 +27,7 @@
 #define kLocationColumn 8 /* The geographic location to which the code is assigned (AL, TX, Manitoba, etc.) */
 #define kCountryColumn 9 /* The country to which the assignment was made (US, CANADA, BAHAMAS, etc.) */
 #define kTimeZoneColumn 20 /* The predominant time zone (s) for this NPA (A - Atlantic; E- Eastern; C - Central; P - Pacific; etc)*/
-
+#define kSpecialColumn 14 /* This column is supposed to be BLANK but it holds a description for some special area codes, which are quoted */
 @interface MDataStore ()
 
 @property (nonatomic) NSManagedObjectContext* managedObjectContext;
@@ -45,11 +45,11 @@
 	return self;
 }
 
--(void)buildZipcodeData
+-(void)buildAreaCodeData
 {
 	NSURL*	areaCodeCSVFile = [[NSBundle mainBundle] URLForResource:kAreaCodeCSVFile withExtension:nil];
 	NSArray* list = [NSArray arrayWithContentsOfCSVURL:areaCodeCSVFile];
-	NSLog(@"%@", list);
+//	NSLog(@"%@", list);
 	
 	NSMutableArray* areacodeData = [NSMutableArray array];
 	
@@ -58,13 +58,38 @@
 			continue;
 		BOOL assigned = [row[kAssignedColumn] isEqualToString:@"Yes"];
 		if (assigned ) {
-			// TODO: convert two letter state names to full state names
-			// TODO: convert all upper case country names to leading caps, PUERTO RICO -> Puerto Rico
-			// TODO: convert country US to something else like USA or United States
 			// TODO: improve filtering so some area codes that really aren't used aren't added
 			NSString* areaCode = row[kAreaCodeColumn];
 			NSString* location = row[kLocationColumn];
 			NSString* country = row[kCountryColumn];
+			
+			// Fix up some oddball records
+			if ([location isEqualToString:@"NANP AREA"]) {
+				NSString* newLocation = row[kSpecialColumn];
+				if (newLocation != nil) {
+					location = [newLocation stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];	// trim double quotes
+				}
+			}
+			
+			// Convert two letter state names to full state names
+			if (location.length == 2) {
+				NSString*	newLocation = [self.stateDictionary objectForKey:location];
+				if (newLocation) {
+					location = newLocation;
+				} else {
+					NSLog(@"BAD LOCATION %@", location);
+				}
+			} else {
+				location = [location capitalizedString];
+			}
+
+			// Convert country US to something else like USA or United States
+			if ([country isEqualToString:@"US"]) {
+				country = @"USA";
+			} else {
+				// Convert all upper case country names to leading caps, PUERTO RICO -> Puerto Rico
+				country = [country capitalizedString];
+			}
 			
 			NSDictionary* rowData = @{ @"areaCode" : areaCode, @"location" : location,   @"country" : country };
 			
@@ -75,9 +100,79 @@
 	self.areacodeData = [areacodeData copy];
 }
 
+-(NSDictionary*)stateDictionary
+{
+	static NSDictionary* states = nil;
+	
+	if (states == nil) {
+		states = @{
+				   @"AL" : @"Alabama",
+				   @"AK" : @"Alaska",
+				   @"AZ" : @"Arizona",
+				   @"AR" : @"Arkansas",
+				   @"CA" : @"California",
+				   @"CO" : @"Colorado",
+				   @"CT" : @"Connecticut",
+				   @"DE" : @"Deleware",
+				   @"DC" : @"District of Columbia",
+				   @"FL" : @"Florida",
+				   @"GA" : @"Georgia",
+				   @"HI" : @"Hawaii",
+				   @"ID" : @"Idaho",
+				   @"IL" : @"Illinois",
+				   @"IN" : @"Indiana",
+				   @"IA" : @"Iowa",
+				   @"KS" : @"Kansa",
+				   @"KY" : @"Kentucky",
+				   @"LA" : @"Louisianna",
+				   @"ME" : @"Maine",
+				   @"MD" : @"Maryland",
+				   @"MA" : @"Massachusetts",
+				   @"MI" : @"Michigan",
+				   @"MN" : @"Minnisota",
+				   @"MS" : @"Mississippi",
+				   @"MO" : @"Missouri",
+				   @"MT" : @"Montana",
+				   @"NE" : @"Nebraska",
+				   @"NV" : @"Nevada",
+				   @"NH" : @"New Hampshire",
+				   @"NJ" : @"New Jersey",
+				   @"NM" : @"New Mexico",
+				   @"NY" : @"New York",
+				   @"NC" : @"North Carolina",
+				   @"ND" : @"North Dakota",
+				   @"OH" : @"Ohio",
+				   @"OK" : @"Oklahoma",
+				   @"OR" : @"Oregon",
+				   @"PA" : @"Pennsylvania",
+				   @"RI" : @"Rhode Island",
+				   @"SC" : @"South Carolina",
+				   @"SD" : @"South Dakota",
+				   @"TN" : @"Tennesee",
+				   @"TX" : @"Texas",
+				   @"UT" : @"Utah",
+				   @"VT" : @"Vermont",
+				   @"VA" : @"Virginia",
+				   @"WA" : @"Washington",
+				   @"WV" : @"West Virginia",
+				   @"WI" : @"Wisconson",
+				   @"WY" : @"Wyoming",
+
+				   @"GU" : @"Guam",
+				   @"AS" : @"American Samoa",
+
+				   // There are other abbreviations but I don't think they're used in csv file
+				   // See https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations
+				   };
+		
+	}
+	
+	return states;
+}
+
 -(void)buildDataStore
 {
-	[self buildZipcodeData];
+	[self buildAreaCodeData];
 	[self addObjectsToMOC];
 	[self listObjects];
 	[self shutdownCoreData];
@@ -100,7 +195,6 @@
 			NSLog(@"Couldn't save context %@", err);
 		}
 	}];
-	
 }
 
 -(void)listObjects
@@ -113,6 +207,7 @@
 	NSError* err;
 	NSArray* fetchedObjects = [context executeFetchRequest:fetchRequest error:&err];
 	
+	NSLog(@"LIST OF AREA CODE OBJECTS IN THE DATABASE");
 	for (NSManagedObject* info in fetchedObjects) {
 		NSLog(@"Area Code: %@, Area Code: %@, Location: %@", [info valueForKey:@"areaCode"], [info valueForKey:@"areaCodeString"], [NSString stringWithFormat:@"%@, %@", [info valueForKey:@"location"], [info valueForKey:@"country"]]);
 	}
