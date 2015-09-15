@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		389089E91BA894F9000F525A /* MMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389089E81BA894F9000F525A /* MMainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		389089EC1BA897ED000F525A /* MSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389089EB1BA897ED000F525A /* MSearchResultsController.m */; settings = {ASSET_TAGS = (); }; };
 		38BE4C581BA77CBB00144435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C571BA77CBB00144435 /* main.m */; };
 		38BE4C5B1BA77CBB00144435 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C5A1BA77CBB00144435 /* AppDelegate.m */; };
-		38BE4C5E1BA77CBB00144435 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C5D1BA77CBB00144435 /* ViewController.m */; };
 		38BE4C611BA77CBB00144435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C5F1BA77CBB00144435 /* Main.storyboard */; };
 		38BE4C641BA77CBB00144435 /* CodeSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C621BA77CBB00144435 /* CodeSearch.xcdatamodeld */; };
 		38BE4C661BA77CBB00144435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C651BA77CBB00144435 /* Assets.xcassets */; };
 		38BE4C691BA77CBB00144435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C671BA77CBB00144435 /* LaunchScreen.storyboard */; };
 		38BE4C741BA77CBB00144435 /* CodeSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C731BA77CBB00144435 /* CodeSearchTests.m */; };
+		38BE4C801BA783DE00144435 /* MDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C7F1BA783DE00144435 /* MDataStore.m */; settings = {ASSET_TAGS = (); }; };
+		38BE4C851BA7857400144435 /* AreaCode+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C821BA7857400144435 /* AreaCode+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		38BE4C861BA7857400144435 /* AreaCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C841BA7857400144435 /* AreaCode.m */; settings = {ASSET_TAGS = (); }; };
+		38BE4C881BA7910A00144435 /* CodeSearch.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C871BA7910A00144435 /* CodeSearch.sqlite */; settings = {ASSET_TAGS = (); }; };
+		38BE4C8B1BA7A26100144435 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C8A1BA7A26100144435 /* CHCSVParser.m */; settings = {ASSET_TAGS = (); }; };
+		38BE4C8F1BA7A2F400144435 /* npa_report.csv in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C8E1BA7A2F400144435 /* npa_report.csv */; settings = {ASSET_TAGS = (); }; };
+		38EC2C081BA89D2900BA92C1 /* MResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EC2C071BA89D2900BA92C1 /* MResultCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		389089E71BA894F9000F525A /* MMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMainTableViewController.h; path = Source/MMainTableViewController.h; sourceTree = "<group>"; };
+		389089E81BA894F9000F525A /* MMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMainTableViewController.m; path = Source/MMainTableViewController.m; sourceTree = "<group>"; };
+		389089EA1BA897ED000F525A /* MSearchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSearchResultsController.h; path = Source/MSearchResultsController.h; sourceTree = "<group>"; };
+		389089EB1BA897ED000F525A /* MSearchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSearchResultsController.m; path = Source/MSearchResultsController.m; sourceTree = "<group>"; };
 		38BE4C531BA77CBB00144435 /* CodeSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BE4C571BA77CBB00144435 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38BE4C591BA77CBB00144435 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38BE4C5A1BA77CBB00144435 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		38BE4C5C1BA77CBB00144435 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		38BE4C5D1BA77CBB00144435 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		38BE4C601BA77CBB00144435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38BE4C631BA77CBB00144435 /* CodeSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodeSearch.xcdatamodel; sourceTree = "<group>"; };
 		38BE4C651BA77CBB00144435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +52,18 @@
 		38BE4C6F1BA77CBB00144435 /* CodeSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BE4C731BA77CBB00144435 /* CodeSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeSearchTests.m; sourceTree = "<group>"; };
 		38BE4C751BA77CBB00144435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38BE4C7E1BA783DE00144435 /* MDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDataStore.h; path = Source/MDataStore.h; sourceTree = "<group>"; };
+		38BE4C7F1BA783DE00144435 /* MDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDataStore.m; path = Source/MDataStore.m; sourceTree = "<group>"; };
+		38BE4C811BA7857400144435 /* AreaCode+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AreaCode+CoreDataProperties.h"; path = "Source/AreaCode+CoreDataProperties.h"; sourceTree = "<group>"; };
+		38BE4C821BA7857400144435 /* AreaCode+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AreaCode+CoreDataProperties.m"; path = "Source/AreaCode+CoreDataProperties.m"; sourceTree = "<group>"; };
+		38BE4C831BA7857400144435 /* AreaCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaCode.h; path = Source/AreaCode.h; sourceTree = "<group>"; };
+		38BE4C841BA7857400144435 /* AreaCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaCode.m; path = Source/AreaCode.m; sourceTree = "<group>"; };
+		38BE4C871BA7910A00144435 /* CodeSearch.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CodeSearch.sqlite; sourceTree = "<group>"; };
+		38BE4C891BA7A26100144435 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = ThirdParty/CHCSVParser/CHCSVParser/CHCSVParser/CHCSVParser.h; sourceTree = "<group>"; };
+		38BE4C8A1BA7A26100144435 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = ThirdParty/CHCSVParser/CHCSVParser/CHCSVParser/CHCSVParser.m; sourceTree = "<group>"; };
+		38BE4C8E1BA7A2F400144435 /* npa_report.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = npa_report.csv; path = AreaCodeInfo/npa_report.csv; sourceTree = "<group>"; };
+		38EC2C061BA89D2900BA92C1 /* MResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MResultCell.h; path = Source/MResultCell.h; sourceTree = "<group>"; };
+		38EC2C071BA89D2900BA92C1 /* MResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MResultCell.m; path = Source/MResultCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +84,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		389089ED1BA89B3E000F525A /* Data Objects */ = {
+			isa = PBXGroup;
+			children = (
+				38BE4C7E1BA783DE00144435 /* MDataStore.h */,
+				38BE4C7F1BA783DE00144435 /* MDataStore.m */,
+				38BE4C831BA7857400144435 /* AreaCode.h */,
+				38BE4C841BA7857400144435 /* AreaCode.m */,
+				38BE4C811BA7857400144435 /* AreaCode+CoreDataProperties.h */,
+				38BE4C821BA7857400144435 /* AreaCode+CoreDataProperties.m */,
+			);
+			name = "Data Objects";
+			sourceTree = "<group>";
+		};
+		389089EE1BA89B54000F525A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				38BE4C591BA77CBB00144435 /* AppDelegate.h */,
+				38BE4C5A1BA77CBB00144435 /* AppDelegate.m */,
+				389089E71BA894F9000F525A /* MMainTableViewController.h */,
+				389089E81BA894F9000F525A /* MMainTableViewController.m */,
+				389089EA1BA897ED000F525A /* MSearchResultsController.h */,
+				389089EB1BA897ED000F525A /* MSearchResultsController.m */,
+				38EC2C061BA89D2900BA92C1 /* MResultCell.h */,
+				38EC2C071BA89D2900BA92C1 /* MResultCell.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		389089EF1BA89B6E000F525A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38BE4C5F1BA77CBB00144435 /* Main.storyboard */,
+				38BE4C8E1BA7A2F400144435 /* npa_report.csv */,
+				38BE4C651BA77CBB00144435 /* Assets.xcassets */,
+				38BE4C671BA77CBB00144435 /* LaunchScreen.storyboard */,
+				38BE4C6A1BA77CBB00144435 /* Info.plist */,
+				38BE4C621BA77CBB00144435 /* CodeSearch.xcdatamodeld */,
+				38BE4C871BA7910A00144435 /* CodeSearch.sqlite */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		38BE4C4A1BA77CBB00144435 = {
 			isa = PBXGroup;
 			children = (
@@ -83,15 +147,10 @@
 		38BE4C551BA77CBB00144435 /* CodeSearch */ = {
 			isa = PBXGroup;
 			children = (
-				38BE4C591BA77CBB00144435 /* AppDelegate.h */,
-				38BE4C5A1BA77CBB00144435 /* AppDelegate.m */,
-				38BE4C5C1BA77CBB00144435 /* ViewController.h */,
-				38BE4C5D1BA77CBB00144435 /* ViewController.m */,
-				38BE4C5F1BA77CBB00144435 /* Main.storyboard */,
-				38BE4C651BA77CBB00144435 /* Assets.xcassets */,
-				38BE4C671BA77CBB00144435 /* LaunchScreen.storyboard */,
-				38BE4C6A1BA77CBB00144435 /* Info.plist */,
-				38BE4C621BA77CBB00144435 /* CodeSearch.xcdatamodeld */,
+				389089EE1BA89B54000F525A /* Controllers */,
+				389089ED1BA89B3E000F525A /* Data Objects */,
+				38BE4C8D1BA7A27600144435 /* ThirdParty */,
+				389089EF1BA89B6E000F525A /* Resources */,
 				38BE4C561BA77CBB00144435 /* Supporting Files */,
 			);
 			path = CodeSearch;
@@ -112,6 +171,23 @@
 				38BE4C751BA77CBB00144435 /* Info.plist */,
 			);
 			path = CodeSearchTests;
+			sourceTree = "<group>";
+		};
+		38BE4C8C1BA7A26A00144435 /* CHCSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				38BE4C891BA7A26100144435 /* CHCSVParser.h */,
+				38BE4C8A1BA7A26100144435 /* CHCSVParser.m */,
+			);
+			name = CHCSVParser;
+			sourceTree = "<group>";
+		};
+		38BE4C8D1BA7A27600144435 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				38BE4C8C1BA7A26A00144435 /* CHCSVParser */,
+			);
+			name = ThirdParty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,8 +270,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BE4C8F1BA7A2F400144435 /* npa_report.csv in Resources */,
 				38BE4C691BA77CBB00144435 /* LaunchScreen.storyboard in Resources */,
 				38BE4C661BA77CBB00144435 /* Assets.xcassets in Resources */,
+				38BE4C881BA7910A00144435 /* CodeSearch.sqlite in Resources */,
 				38BE4C611BA77CBB00144435 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,10 +292,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BE4C861BA7857400144435 /* AreaCode.m in Sources */,
 				38BE4C641BA77CBB00144435 /* CodeSearch.xcdatamodeld in Sources */,
-				38BE4C5E1BA77CBB00144435 /* ViewController.m in Sources */,
 				38BE4C5B1BA77CBB00144435 /* AppDelegate.m in Sources */,
+				38BE4C8B1BA7A26100144435 /* CHCSVParser.m in Sources */,
+				389089EC1BA897ED000F525A /* MSearchResultsController.m in Sources */,
+				389089E91BA894F9000F525A /* MMainTableViewController.m in Sources */,
+				38EC2C081BA89D2900BA92C1 /* MResultCell.m in Sources */,
+				38BE4C801BA783DE00144435 /* MDataStore.m in Sources */,
 				38BE4C581BA77CBB00144435 /* main.m in Sources */,
+				38BE4C851BA7857400144435 /* AreaCode+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -404,6 +488,7 @@
 				38BE4C7A1BA77CBB00144435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38BE4C7B1BA77CBB00144435 /* Build configuration list for PBXNativeTarget "CodeSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +497,7 @@
 				38BE4C7D1BA77CBB00144435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
