@@ -36,8 +36,10 @@
 	self.tableView.tableHeaderView = self.searchController.searchBar;
 	
 	self.searchController.delegate = self;
-//	self.searchController.dimsBackgroundDuringPresentation = NO; // default is YES
 	self.searchController.searchBar.delegate = self;
+
+	// This makes the results controller place itself correctly relative to this view controller
+	self.definesPresentationContext = YES;
 
 	// Load all the area codes
 	NSError* err;
