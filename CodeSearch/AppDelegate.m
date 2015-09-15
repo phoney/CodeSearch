@@ -24,7 +24,7 @@
 	[self buildDataStore];
 #endif
 	
-	[self listObjects];
+//	[self listObjects];
 
 	return YES;
 }
