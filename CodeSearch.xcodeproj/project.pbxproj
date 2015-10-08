@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		389089E91BA894F9000F525A /* MMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389089E81BA894F9000F525A /* MMainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		389089EC1BA897ED000F525A /* MSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389089EB1BA897ED000F525A /* MSearchResultsController.m */; settings = {ASSET_TAGS = (); }; };
+		389A03C41BC7254500AF102C /* MAreaCodeSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 389A03C31BC7254500AF102C /* MAreaCodeSearcher.m */; settings = {ASSET_TAGS = (); }; };
 		38BE4C581BA77CBB00144435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C571BA77CBB00144435 /* main.m */; };
 		38BE4C5B1BA77CBB00144435 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE4C5A1BA77CBB00144435 /* AppDelegate.m */; };
 		38BE4C611BA77CBB00144435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BE4C5F1BA77CBB00144435 /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 		389089E81BA894F9000F525A /* MMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMainTableViewController.m; path = Source/MMainTableViewController.m; sourceTree = "<group>"; };
 		389089EA1BA897ED000F525A /* MSearchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSearchResultsController.h; path = Source/MSearchResultsController.h; sourceTree = "<group>"; };
 		389089EB1BA897ED000F525A /* MSearchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSearchResultsController.m; path = Source/MSearchResultsController.m; sourceTree = "<group>"; };
+		389A03C21BC7254500AF102C /* MAreaCodeSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAreaCodeSearcher.h; path = Source/MAreaCodeSearcher.h; sourceTree = "<group>"; };
+		389A03C31BC7254500AF102C /* MAreaCodeSearcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAreaCodeSearcher.m; path = Source/MAreaCodeSearcher.m; sourceTree = "<group>"; };
 		38BE4C531BA77CBB00144435 /* CodeSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BE4C571BA77CBB00144435 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38BE4C591BA77CBB00144435 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 			children = (
 				38BE4C7E1BA783DE00144435 /* MDataStore.h */,
 				38BE4C7F1BA783DE00144435 /* MDataStore.m */,
+				389A03C21BC7254500AF102C /* MAreaCodeSearcher.h */,
+				389A03C31BC7254500AF102C /* MAreaCodeSearcher.m */,
 				38BE4C831BA7857400144435 /* AreaCode.h */,
 				38BE4C841BA7857400144435 /* AreaCode.m */,
 				38BE4C811BA7857400144435 /* AreaCode+CoreDataProperties.h */,
@@ -127,8 +132,6 @@
 				389089E81BA894F9000F525A /* MMainTableViewController.m */,
 				389089EA1BA897ED000F525A /* MSearchResultsController.h */,
 				389089EB1BA897ED000F525A /* MSearchResultsController.m */,
-				38EC2C061BA89D2900BA92C1 /* MResultCell.h */,
-				38EC2C071BA89D2900BA92C1 /* MResultCell.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -145,6 +148,15 @@
 				38BE4C871BA7910A00144435 /* CodeSearch.sqlite */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		389A03C11BC724AF00AF102C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38EC2C061BA89D2900BA92C1 /* MResultCell.h */,
+				38EC2C071BA89D2900BA92C1 /* MResultCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		38BE4C4A1BA77CBB00144435 = {
@@ -171,6 +183,7 @@
 			children = (
 				389089EE1BA89B54000F525A /* Controllers */,
 				389089ED1BA89B3E000F525A /* Data Objects */,
+				389A03C11BC724AF00AF102C /* Views */,
 				38BE4C8D1BA7A27600144435 /* ThirdParty */,
 				389089EF1BA89B6E000F525A /* Resources */,
 				38BE4C561BA77CBB00144435 /* Supporting Files */,
@@ -349,6 +362,7 @@
 				38BE4C5B1BA77CBB00144435 /* AppDelegate.m in Sources */,
 				389089EC1BA897ED000F525A /* MSearchResultsController.m in Sources */,
 				389089E91BA894F9000F525A /* MMainTableViewController.m in Sources */,
+				389A03C41BC7254500AF102C /* MAreaCodeSearcher.m in Sources */,
 				38EC2C081BA89D2900BA92C1 /* MResultCell.m in Sources */,
 				38BE4C581BA77CBB00144435 /* main.m in Sources */,
 				38BE4C851BA7857400144435 /* AreaCode+CoreDataProperties.m in Sources */,

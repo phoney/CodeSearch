@@ -5,6 +5,12 @@
 //  Created by Brian Stern on 9/14/15.
 //  Copyright © 2015 PhoneyDeveloper. All rights reserved.
 //
+//	This app displays a list of all area codes for north america and some other
+//	countries near the US. The user can search the list by typing in the digits of
+//	an area code or by typing in a state or country name.
+//	The app uses core data as its database of area codes. There are two targets.
+//	One is used to build the sqlite file used by core data. The second target
+//	is the normal target to run the app.
 
 #import "AppDelegate.h"
 #if BUILD_STORE
