@@ -5,6 +5,7 @@
 //  Created by Brian Stern on 9/15/15.
 //  Copyright © 2015 PhoneyDeveloper. All rights reserved.
 //
+//  Displays the filtered list of area codes.
 
 #import "MSearchResultsController.h"
 #import "MResultCell.h"
